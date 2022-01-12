@@ -1,11 +1,12 @@
 from shape import Shape
-from dataclasses import dataclass
-import math
 
-@dataclass
 class Rectangle(Shape):
-    width: float = 1.0
-    length: float = 1.0
+ 
+    def __init__(self, width=1.0, length=1.0, color='red', filled=True): 
+        self.setWidth(width)
+        self.setLength(length)
+        self.setColor(color)
+        self.setFilled(filled)
 
     def getWidth(self):
         return self.width
