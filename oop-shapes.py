@@ -82,8 +82,25 @@ class Rectangle(Shape):
 @dataclass
 class Square(Rectangle):
     # side: float = 1.0
-    width: float = 1.0
-    length: float = 1.0
+    # width: float = 1.0
+    # length: float = 1.0
+    # color: str
+
+    def __init__(self, side=1.0, color='red', filled=True): 
+        self.setSide(side)
+        self.setColor(color)
+        self.setFilled(filled)
+
+        # if (width or length): 
+            
+            # if (color and filled): 
+            #     self.width=width 
+            #     self.length=width 
+            #     self._color = color
+            #     self.setFilled(filled)
+            # else: 
+            #     self.width=width 
+            #     self.length=width
 
     def getSide(self):
         return self.width
@@ -105,15 +122,15 @@ class Square(Rectangle):
         return self.width * 4
     
     def __str__(self):
-        return f'Square color: {self._color}, Square filled: {self._filled}, ' \
+        return f'Square color: {self.getColor()}, Square filled: {self._filled}, ' \
             f'width: {self.width}, length: {self.width}'
 
 
 
 '''Manual Tests'''
 
-a = Square()
+a = Square(side=2.0, color='blue')
 
-print(a.setSide(2.0))
-print(a.setColor('blue'))
+# print(a.setSide(2.0))
+# print(a.setColor('blue'))
 print(a)
