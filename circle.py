@@ -1,10 +1,11 @@
 from shape import Shape
-from dataclasses import dataclass
 import math
 
-@dataclass
 class Circle(Shape):
-    radius: float = 1.0
+    def __init__(self, radius=1.0, color='red', filled=True): 
+        self.radius = radius
+        self.setColor(color)
+        self.setFilled(filled)
 
     def getRadius(self):
         return self.radius
