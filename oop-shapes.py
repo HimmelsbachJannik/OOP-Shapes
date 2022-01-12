@@ -52,7 +52,7 @@ class Circle(Shape):
     
 
 @dataclass
-class Rectancle(Shape):
+class Rectangle(Shape):
     width: float = 1.0
     length: float = 1.0
 
@@ -80,20 +80,33 @@ class Rectancle(Shape):
 
 
 @dataclass
-class Square(Rectancle):
-    side: float = 1.0
-    width: float = side
-    length: float = side
+class Square(Rectangle):
+    # side: float = 1.0
+    width: float = 1.0
+    length: float = 1.0
 
     def getSide(self):
-        return self.side
+        return self.width
     
     def setSide(self, side):
-        self.side = side
+        self.width = side
+        self.length = side
+
+    def setWidth(self, side):
+        self.setSide(side)
+
+    def setLength(self,side):
+        self.setSide(side)
+    
+    def getArea(self):
+        return self.width ** 2
+    
+    def getPerimeter(self):
+        return self.width * 4
     
     def __str__(self):
         return f'Square color: {self._color}, Square filled: {self._filled}, ' \
-            f'width: {self.side}, length: {self.side}'
+            f'width: {self.width}, length: {self.width}'
 
 
 
@@ -102,4 +115,5 @@ class Square(Rectancle):
 a = Square()
 
 print(a.setSide(2.0))
+print(a.setColor('blue'))
 print(a)
