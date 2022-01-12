@@ -3,8 +3,8 @@ from shape import Shape
 class Rectangle(Shape):
  
     def __init__(self, width=1.0, length=1.0, color='red', filled=True): 
-        self.setWidth(width)
-        self.setLength(length)
+        self.width = width
+        self.length = length
         self.setColor(color)
         self.setFilled(filled)
 
