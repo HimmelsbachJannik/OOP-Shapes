@@ -27,7 +27,7 @@ class Shape(ABC):
         pass
 
     def __str__(self):
-        return f'Shape color: {self._color}, Shape filled: {self._filled}'
+        return f'Shape color: {self.getColor()}, Shape filled: {self.isFilled()}'
 
 
 
