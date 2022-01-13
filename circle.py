@@ -2,7 +2,7 @@ from shape import Shape
 import math
 
 class Circle(Shape):
-    def __init__(self, radius=1.0, color='red', filled=True): 
+    def __init__(self, radius:float=1.0, color:str='red', filled:bool=True): 
         self.radius = radius
         self.setColor(color)
         self.setFilled(filled)
