@@ -1,7 +1,7 @@
 from rectangle import Rectangle
 class Square(Rectangle):
 
-    def __init__(self, side=1.0, color='red', filled=True): 
+    def __init__(self, side:float=1.0, color:str='red', filled:bool=True): 
         self.setSide(side)
         self.setColor(color)
         self.setFilled(filled)
@@ -9,11 +9,11 @@ class Square(Rectangle):
     def getSide(self):
         return self.width
     
-    def setSide(self, side):
+    def setSide(self, side:float):
         self.width = side
         self.length = side
 
-    def setWidth(self, side):
+    def setWidth(self, side:float):
         self.setSide(side)
 
     def setLength(self,side):
