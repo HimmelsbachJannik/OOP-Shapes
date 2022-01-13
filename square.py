@@ -16,7 +16,7 @@ class Square(Rectangle):
     def setWidth(self, side:float):
         self.setSide(side)
 
-    def setLength(self,side):
+    def setLength(self,side:float):
         self.setSide(side)
     
     def getArea(self):
