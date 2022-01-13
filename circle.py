@@ -20,5 +20,5 @@ class Circle(Shape):
         return math.pi * (self.radius**2)
 
     def __str__(self):
-        return f'Circle color: {self._color}, Circle filled: {self._filled}, radius: {self.radius}'
+        return f'Circle color: {self.getColor()}, Circle filled: {self.isFilled()}, radius: {self.radius}'
     
