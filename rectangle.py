@@ -2,7 +2,7 @@ from shape import Shape
 
 class Rectangle(Shape):
  
-    def __init__(self, width=1.0, length=1.0, color='red', filled=True): 
+    def __init__(self, width:float=1.0, length:float=1.0, color:str='red', filled:bool=True): 
         self.width = width
         self.length = length
         self.setColor(color)
@@ -27,5 +27,5 @@ class Rectangle(Shape):
         return 2 * self.width + 2 * self.length
     
     def __str__(self):
-        return f'Rectangle color: {self._color}, Rectangle filled: {self._filled}, ' \
+        return f'Rectangle color: {self.getColor()}, Rectangle filled: {self.isFilled}, ' \
             f'Rectangle width: {self.width}, Rectangle length: {self.length}'
