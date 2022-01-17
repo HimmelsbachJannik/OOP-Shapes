@@ -28,3 +28,11 @@ class Square(Rectangle):
     def __str__(self):
         return f'Square color: {self.getColor()}, Square filled: {self.isFilled()}, ' \
             f'width: {self.width}, length: {self.width}'
+
+
+'''Manuel Test Section'''
+
+'''QPK-54 Test Case'''
+
+# square = Square()
+# print(square)

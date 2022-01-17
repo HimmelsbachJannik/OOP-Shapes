@@ -1,10 +1,10 @@
 from abc import ABC, abstractmethod
-from dataclasses import dataclass
 
-@dataclass
 class Shape(ABC):
-    _color: str = 'red'
-    _filled: bool = True
+    def __init__(self):
+        super().__init__()
+        self._color = 'red'
+        self._filled = True
 
     def getColor(self):
         return self._color
@@ -19,23 +19,13 @@ class Shape(ABC):
         self._filled = filled
     
     @abstractmethod
-    def getArea(self):
+    def getArea(self:float):
         pass
 
     @abstractmethod
-    def getPerimeter(self):
+    def getPerimeter(self:float):
         pass
 
     def __str__(self):
         return f'Shape color: {self.getColor()}, Shape filled: {self.isFilled()}'
 
-
-
-
-'''Manual Tests'''
-
-# a = Square(side=2.0, color='blue')
-
-# print(a.setSide(2.0))
-# print(a.setColor('blue'))
-# print(a)

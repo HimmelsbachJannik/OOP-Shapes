@@ -27,5 +27,14 @@ class Rectangle(Shape):
         return 2 * self.width + 2 * self.length
     
     def __str__(self):
-        return f'Rectangle color: {self.getColor()}, Rectangle filled: {self.isFilled}, ' \
+        return f'Rectangle color: {self.getColor()}, Rectangle filled: {self.isFilled()}, ' \
             f'Rectangle width: {self.width}, Rectangle length: {self.length}'
+
+    
+
+'''Manual Test Cases'''
+
+'''QPK-52 Test Case'''
+
+# rectangle = Rectangle()
+# print(rectangle)

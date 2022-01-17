@@ -22,3 +22,12 @@ class Equilateral_Triangle(Shape):
     def __str__(self):
         return f'Equilateral Triangle color: {self.getColor()}, Equilateral Triangle filled: {self.isFilled()}, ' \
             f'Side Lenght: {self.sideLength}'
+
+
+
+'''Manuel Test Section'''
+
+'''QPK-58 Test Case'''
+
+# triangle = Equilateral_Triangle()
+# print(triangle)
